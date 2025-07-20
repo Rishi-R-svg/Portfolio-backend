@@ -12,7 +12,10 @@ connectDB()
 
 const port = process.env.PORT || 4000
 
-app.use(cors())
+app.use(cors({
+  origin:'https://portfolio-frontend-ysyt.onrender.com',
+  credentials:true
+}))
 
 app.use(express.json())
 
